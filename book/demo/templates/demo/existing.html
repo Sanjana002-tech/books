@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    {% include "base.html" %}
+    <center><h1>{{title}}</h1></center>
+    <style>
+        body{
+            background-color:pink;
+        }
+    </style>
+<table align='center' border="2">
+    <thread>
+        <tr>
+            <td>Title</td>
+            <td>author</td>
+            <td>Published date</td>
+            <td>isbn</td>
+            
+        </tr>
+    </thread>
+    {% for k in queryset %}
+    <tbody>
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{ k.s_Title}}</td>
+            <td>{{ k.s_author}}</td>
+            <td>{{ k.s_published date}}</td>
+            <td>{{ k.s_isbn}}</td>
+            
+        </tr>
+    </tbody>
+    {% endfor %}
+</table>    
+</html>
